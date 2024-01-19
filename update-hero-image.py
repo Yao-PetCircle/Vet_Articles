@@ -13,51 +13,35 @@ from bs4 import BeautifulSoup
 from requests import get
 from io import BytesIO
 from PIL import Image
+import os
 
-if len(sys.argv) != 2:
-    sys.exit('Usage: python update-hero-image.py article/10-frequent-kitten-questions.html')
 
-fileToModify = sys.argv[1]
-fileContents = ''
 
-with open(fileToModify) as f:
-    fileContents = f.read()
+for fileToModify in os.listdir(os.getcwd()+'/article'):
+   with open(os.path.join(os.getcwd()+'/article', fileToModify)) as f: 
+        print(fileToModify)
+        fileContents = ''
+        with open("./article/"+fileToModify) as f:
+            fileContents = f.read()
+            # make it HTML so it can be parsed
+            fileContents = '<html>' + fileContents + '</html>'
 
-# make it HTML so it can be parsed
-fileContents = '<html>' + fileContents + '</html>'
+            soup = BeautifulSoup(fileContents, 'html.parser')
 
-soup = BeautifulSoup(fileContents, 'html.parser')
-heroDiv = soup.find(id='heroImage')
+            heroImages = soup.find_all('img')
 
-if heroDiv is None:
-    print('heroDiv not found')
-    exit() 
+            for heroImage in heroImages:
+                # replace it with GCS url so we dont get blocked by CDN
+                URL = heroImage['src'].replace('www.petcircle.com.au', 'storage.googleapis.com')
+                # download image
+                res = get(URL, stream=True)
+                img = Image.open(BytesIO(res.content))
+                width, height = img.size
 
-heroImage = heroDiv.find('img')
-
-if heroImage is None:
-    print('heroImage not found')
-    exit()
-
-#print(heroImage['src'])
-
-# replace it with GCS url so we dont get blocked by CDN
-URL = heroImage['src'].replace('www.petcircle.com.au', 'storage.googleapis.com')
-
-# download image
-res = get(URL, stream=True)
-img = Image.open(BytesIO(res.content))
-width, height = img.size
-
-# generate style block to be appended to hero img
-style = 'max-width: 100%; height: auto; aspect-ratio: ' + str(width) + '/' + str(height) + ';'
-
-heroImage['style'] = style
-
-#print(style)
-#print(soup)
-
-# write to an updated directory
-outputFile = open('updated/' + fileToModify, "w")
-outputFile.write(str(soup))
-outputFile.close()
+            
+                heroImage['width'] = width
+                heroImage['height'] = height
+                # write to an updated directory
+                outputFile = open('updated/' + fileToModify, "w")
+                outputFile.write(str(soup))
+                outputFile.close()

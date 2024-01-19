@@ -1,0 +1,25 @@
+{
+  "name": "vet_articles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "modifyImage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yao-PetCircle/Vet_Articles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yao-PetCircle/Vet_Articles/issues"
+  },
+  "homepage": "https://github.com/Yao-PetCircle/Vet_Articles#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "image-size": "^1.1.1",
+    "probe-image-size": "^7.2.3",
+    "request-image-size": "^2.2.0"
+  }
+}
