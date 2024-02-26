@@ -16,32 +16,49 @@ from PIL import Image
 import os
 
 
+folderName = 'articles_1_Feb'
+updateFolderName = 'articles_1_Fen_updated'
 
-for fileToModify in os.listdir(os.getcwd()+'/article'):
-   with open(os.path.join(os.getcwd()+'/article', fileToModify)) as f: 
-        print(fileToModify)
+print(os.getcwd()+'/'+folderName)
+
+for fileToModify in os.listdir(os.getcwd()+'/'+folderName):
+
+   with open(os.path.join(os.getcwd()+'/'+folderName, fileToModify)) as f: 
+
+        print("fileToModify",fileToModify)
         fileContents = ''
-        with open("./article/"+fileToModify) as f:
-            fileContents = f.read()
-            # make it HTML so it can be parsed
-            fileContents = '<html>' + fileContents + '</html>'
+        if fileToModify.endswith('.html'):
 
-            soup = BeautifulSoup(fileContents, 'html.parser')
+            with open("./"+folderName+"/"+fileToModify) as f:
+                fileContents = f.read()
+                # make it HTML so it can be parsed
+                fileContents = '<html>' + fileContents + '</html>'
 
-            heroImages = soup.find_all('img')
+                soup = BeautifulSoup(fileContents, 'html.parser')
 
-            for heroImage in heroImages:
-                # replace it with GCS url so we dont get blocked by CDN
-                URL = heroImage['src'].replace('www.petcircle.com.au', 'storage.googleapis.com')
-                # download image
-                res = get(URL, stream=True)
-                img = Image.open(BytesIO(res.content))
-                width, height = img.size
+                heroImages = soup.find_all('img')
 
-            
-                heroImage['width'] = width
-                heroImage['height'] = height
-                # write to an updated directory
-                outputFile = open('updated/' + fileToModify, "w")
-                outputFile.write(str(soup))
-                outputFile.close()
+
+                for heroImage in heroImages:
+                    # replace it with GCS url so we dont get blocked by CDN
+                    URL = heroImage['src'].replace('www.petcircle.com.au', 'storage.googleapis.com')
+                    # download image
+                    print("URL",URL)
+                    try:
+                        res = get(URL, stream=True)
+                        
+                        img = Image.open(BytesIO(res.content))
+                        width, height = img.size
+
+                        heroImage['width'] = width
+                        heroImage['height'] = height
+                        # write to an updated directory
+
+                        print("heroImage",heroImage)
+                        outputFile = open(updateFolderName+'/' + fileToModify, "w")
+                        outputFile.write(str(soup))
+                        outputFile.close()
+                    except:
+                        print("image not found")
+
+                    

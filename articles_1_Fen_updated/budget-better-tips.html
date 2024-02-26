@@ -1,0 +1,780 @@
+<html>
+<div class="container">
+<div class="row">
+<style>
+            #article.linked-natural .check-mark-list {
+                padding: 20px;
+                margin-bottom: 20px;
+                background: #fffcee;
+                color: black;
+                box-shadow: 2px 2px 10px #ccc;
+            }
+
+            #article.linked-natural .check-mark-list>h3 {
+                text-align: center;
+            }
+
+            #article.linked-natural .check-mark-list li {
+                margin-right: 20px;
+                vertical-align: middle;
+                line-height: 2em;
+            }
+
+            #article.linked-natural .check-mark-list li::before {
+                content: '\2610';
+                width: auto;
+                font-size: 2em;
+                padding-right: 10px;
+                position: relative;
+                top: .1em;
+            }
+        </style>
+<style>
+            #article.linked-natural a {
+                text-decoration: underline;
+                color: #00b1b9;
+            }
+
+            #article.linked-natural img {
+                object-fit: cover;
+            }
+
+            #article.linked-natural .main-nav-links li {
+                margin-bottom: 18px;
+            }
+
+            #article.linked-natural .article-ad-banner {
+                padding: 15%;
+            }
+
+            #article.linked-natural .read-more-link.flexed {
+                display: flex;
+            }
+
+            #article.linked-natural .custom-discover-heading.sub-heading {
+                font-size: 25px !important;
+            }
+
+            @media screen and (max-width: 37em),
+            print and (max-width: 5in) {
+                #article.linked-natural .article-ad-banner {
+                    padding: 0;
+                }
+            }
+
+
+            #article.linked-natural ul.bullet-point {
+                list-style: inside disc;
+                list-style-image: inherit;
+            }
+
+            @media screen and (max-width: 60em),
+            print and (max-width: 10in) {
+                #article.linked-natural .read-more-link.flexed {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+<style>
+            /* .compare-section {
+                position: relative;
+            }
+    
+            .compare-section > .compare-table
+            {
+                display:grid;
+                grid-template-columns: 200px 100px 100px;
+            }
+    
+            .compare-section > .compare-table > .fields,
+            .compare-section > .compare-table > .product
+            {
+                display:contents;
+            } */
+
+            .compare-table {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            .compare-table>.fields {
+                display: none;
+            }
+
+            .compare-table>.product {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-content: center;
+                justify-content: center;
+                padding-left: 5px;
+                padding-right: 5px;
+                margin-bottom: 30px;
+            }
+
+            #article.linked-natural .compare-table>.product img {
+                height: 200px;
+                object-fit: contain;
+            }
+
+            .compare-table>.product> :nth-child(1) {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                text-align: center;
+            }
+
+            .compare-table>.product> :nth-child(2),
+            .compare-table>.product> :nth-child(3) {
+                text-align: center;
+                background-color: #f5f5f5;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border: solid 1px #CCC;
+            }
+
+            .compare-table>.product> :nth-child(2) {
+                margin-top: 10px;
+            }
+
+            .compare-table>.product> :nth-child(3) {}
+
+            .compare-table>.product span.qty {
+                font-size: smaller;
+            }
+
+
+            @media screen and (max-width:1024px) {
+                .compare-table {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            @media screen and (max-width:512px) {
+                .compare-table {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+                    #article .recipe a {
+            text-decoration: underline;
+            color: rgb(0, 173, 173)
+        }
+    
+        .recipe {
+            clear: both;
+            position: relative;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+        }
+    
+        .recipe h4 {
+            margin-bottom: 0;
+        }
+    
+        .recipe ul {
+            clear: none;
+        }
+    
+        .recipe .recipe-card>div {
+            margin-bottom: 20px;
+            min-width: 200px;
+        }
+    
+        .recipe .for {
+            margin-left: 20px;
+        }
+    
+        .recipe .for>img {
+            max-width: 300px;
+        }
+    
+        @media screen and (max-width: 55.5em),
+        print and (max-width: 7.5in) {
+            .recipe {
+                grid-template-columns: auto;
+            }
+    
+            .recipe .for {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-left: inherit;
+            }
+    
+            .recipe .for>img {
+                grid-row: 1;
+                max-width: 100%;
+            }
+        }
+    
+        .recipe .for ul {
+            display: grid;
+            grid-auto-flow: column;
+            padding-bottom: 20px;
+        }
+    
+        .recipe .for ul li {
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-size: auto 80px;
+            padding-top: 85px !important;
+            background-repeat: no-repeat;
+            background-position: top center;
+            text-align: center;
+        }
+    
+    
+        .recipe .for .for-cats {
+            background-image: url('https://petcircle.com.au/petcircle-assets/content/homepage/cat.png');
+        }
+    
+        .recipe .for .for-dogs {
+            background-image: url('https://petcircle.com.au/petcircle-assets/content/homepage/dog.png');
+        }
+    
+        .recipe .for .for-guinea-pigs {
+            background-image: url('https://petcircle.com.au/petcircle-assets/content/homepage/guinea-pig-small.png');
+        }
+    
+        .recipe .for .for-rabbits {
+            background-image: url('https://petcircle.com.au/petcircle-assets/content/homepage/bunny-1.png');
+        }
+    
+        .recipe-card .ingredients,
+        .recipe-card .method {
+            padding-left: 20px;
+        }
+    
+        .recipe-card {
+            background-color: #EEE;
+            padding: 10px;
+            border-radius: 10px;
+            padding-bottom: 1px;
+            margin-bottom: 10px;
+            box-shadow: #888 0 5px 5px;
+        }
+    
+        .recipe-card h3 {
+            border-bottom: solid 1px #CCC;
+            padding-bottom: 5px;
+            padding-left: 10px;
+        }
+    
+        .recipe-card .ingredients ul {
+            list-style: inside disc;
+            list-style-image: inherit;
+        }
+    
+        .recipe-card .method ol {
+            padding-left: 0;
+            list-style: inside numeric;
+        }
+        
+        </style>
+<div id="heroImage">
+<div class="col-sm-12">
+<img height="351" src="https://storage.googleapis.com/petcircle-assets/images/blog/budget-tips-hero.jpg" width="850"/>
+</div>
+</div>
+<div class="linked-natural" id="article">
+<div class="col-sm-12">
+<div id="rightPanel">
+<div class="col-sm-12">
+<h1>Budget Tips For Pet Owners</h1>
+<div id="date">LAST UPDATED 17 Jan 2024</div>
+<p><b><em>This article is written by Pet Circle veterinarian, <a href="/discover/vet-profile-belinda-stancombe"><span id="article-author">Dr
+                                            Belinda
+                                            Stancombe</span></a></em></b></p>
+<p>We all want to start off the New Year afresh so why not put some actions into place with some handy budget options for our pets. With the cost of living at an all time high we can all benefit from some money-saving tips. Being back at work and getting the kids back to school presents an ideal opportunity to plan for the year ahead. Of course we still all want what is best for our pets and saving money
+                            doesn't mean having to substitute on quality. </p>
+<p>Our vets have listed their top tips on how to budget better for your pet and save money,
+                            while
+                            ensuring the optimal health and well being of your pet.
+
+                        </p>
+<div class="col-sm-4">
+<p class="edit-details" style="margin-bottom: 30px"><a class="ui-edit" href="/dog/cat/food" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Shop
+                                    All Dog and Cat Food</a></p>
+</div>
+<div class="col-sm-4">
+<p class="edit-details" style="margin-bottom: 30px"><a class="ui-edit" href="/dog/cat/treats" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Shop
+                                    All Dog and Cat Treats</a></p>
+</div>
+<div class="col-sm-4">
+<p class="edit-details" style="margin-bottom: 30px"><a class="ui-edit" href="/dog/cat/toys" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Shop
+                                    All Dog and Cat Toys</a></p>
+</div>
+<h3>Contents: </h3>
+<ul class="main-nav-links">
+<li><a href="#bulk">1. Buy in Bulk</a></li>
+<li><a href="#preventatives">2. Give the Right Preventatives</a></li>
+<li><a href="#groom">3. Grooming at Home</a></li>
+<li><a href="#insurance">4. Consider Pet Insurance</a></li>
+<li><a href="#vet">5. Keep Up Regular Veterinary Visits</a></li>
+<li><a href="#premium">6. Choose a Premium Pet Food</a></li>
+<li><a href="#autodelivery">7. Opt for Auto Delivery or Subscriptions</a></li>
+<li><a href="#toys">8. Interactive Toys and Treats</a></li>
+<li><a href="#online">9. Buy Products Online</a></li>
+</ul>
+<h2 class="custom-discover-heading" id="bulk">Tip 1. Buy in Bulk</h2>
+<img height="351" src="https://storage.googleapis.com/petcircle-assets/images/blog/budget-better-1.jpg" width="850"/>
+<p style="font-size:small">Image from <a href="https://www.instagram.com/sakeandshiro_theburmese/">@sakeandshiro_theburmese/</a>
+</p>
+<p>Buying products in bulk, such as food, litter or preventatives can help save money in the
+                            long
+                            run. </p>
+<p>While it may be tempting to just buy a small bag upfront because it costs less, buying larger
+                            bags in bulk brings down the price per kg. For example <a href="https://www.petcircle.com.au/product/hills-science-diet-adult-dry-dog-food/h6488hg">Hills
+                                Science Diet Adult Dry Food</a> is almost 40% cheaper when purchased in bulk. </p>
+<p>Dry and wet food, if stored correctly, has a long expiry date, so storing in a dry, cool
+                            place
+                            either in the original sealed bag that they came in or in <a href="/search?variety=storage-and-accessories&amp;pet=cat&amp;pet=dog&amp;category=feeding&amp;type=food-storage">airtight
+                                containers</a> will help keep
+                            food fresher for longer. </p>
+
+<h3>Small vs Bulk Buy Comparison</h3>
+<div class="compare-section col-sm-12">
+<div class="compare-table">
+<div class="fields">
+<span>Product</span>
+<span>Small Buy</span>
+<span>Bulk Buy</span>
+</div>
+<div class="product">
+<span>
+<a href="/dog/food/dry-food?brand=advance">
+<img height="1000" src="https://www.petcircle.com.au/petcircle-assets/images/products/z/advance-medium-adult-dry-dog-food-chicken-with-rice.png" width="1000"/>
+</a>
+<strong>Advance Dog Food</strong>
+</span>
+<span><span class="qty">3kg bag</span> <br/>$12.99 per kg</span>
+<span><span class="qty">40kg bag</span> <br/><b>$6.49 </b>per kg</span>
+</div>
+<div class="product">
+<span>
+<a href="/dog/food/dry-food?brand=royal-canin">
+<img height="1000" src="https://www.petcircle.com.au/petcircle-assets/images/products/z/royal-canin-medium-adult-dry-dog-food.png" width="1000"/>
+</a>
+<strong>Royal Canin Dog Food</strong>
+</span>
+<span><span class="qty">4kg bag</span> <br/>$12.49 per kg</span>
+<span><span class="qty">30kg bag</span> <br/><b>$10.49 </b>per kg</span>
+</div>
+<div class="product">
+<span>
+<a href="/cat/food/dry-food?brand=hills-science-diet">
+<img height="1000" src="https://www.petcircle.com.au/petcircle-assets/images/products/z/hills-science-diet-adult-cat-dry-food.png" width="1000"/>
+</a>
+<strong>Hills Science Diet Cat Food</strong>
+</span>
+<span><span class="qty">2kg bag</span> <br/>$21.25 per kg</span>
+<span><span class="qty">10kg bag</span> <br/><b>$15.80 </b>per kg</span>
+</div>
+<div class="product">
+<span>
+<a href="/black-hawk?pet=cat">
+<img src="https://www.petcircle.com.au/petcircle-assets/images/products/p/black-hawk-dry-cat-food-adult-chicken-and-rice.png"/>
+</a>
+<strong>Black Hawk Dry Cat Food</strong>
+</span>
+<span><span class="qty">1.5kg bag</span> <br/>$21.99 per kg</span>
+<span><span class="qty">25kg bag</span> <br/><b>$9.73 </b>per kg</span>
+</div>
+</div>
+</div>
+<h2 class="custom-discover-heading" id="preventatives">Tip 2: Give The Right
+                            Preventatives</h2>
+<img height="351" src="https://storage.googleapis.com/petcircle-assets/images/blog/supplements-3.jpg" width="850"/>
+<p>Regular preventatives are important to help protect your pet against nasty parasites such as
+                            ticks, heartworm and hookworm which can make pets really
+                            unwell, with treatments running into the thousands. In some cases these parasites
+                            may even be
+                            deadly!! </p>
+<p>Choosing the right preventative for your pet can be difficult. With so many options
+                            on the
+                            market, it is easy for owner to be confused between the different brands and what
+                            their pet
+                            should be covered for based on their age, location and whether they are indoor or
+                            outdoor. When
+                            swapping between different brands of preventatives, pet parents may accidentally no
+                            longer be
+                            covering for a particular parasite or they may in fact be doubling up on
+                            preventatives, meaning
+                            that they are spending more than they need to on prevention. </p>
+<p>To ensure you are covering your pet for all necessary preventative, check out these
+                            helpful
+                            comparison tables for <a href="/discover/flea-tick-worming-guide-dog#comparison">dogs</a>
+                            and <a href="/discover/flea-tick-worming-guide-cat#comparison">cats</a>. If you are
+                            unsure which preventative is the most suitable for your pet, it is best to
+                            check with your local veterinarian or contact the <a href="/discover/vet-pet-plan">Pet
+                                Circle
+                                Vet Squad</a>. </p>
+<p class="read-more-link"><b>For more information on preventatives</b> read our
+                            veterinary written articles <a href="/discover/flea-tick-worming-guide-dog">Flea,
+                                Tick and
+                                Worming Guide For Dogs</a> and <a href="/discover/flea-tick-worming-guide-cat">Flea,
+                                Tick
+                                and Worming Guide For Cats</a>.</p>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/nexgard-spectra" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/nexgard-spectra-large-dog.png" width="1000"/></a><a class="ui-edit" href="/nexgard-spectra" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Nexgard
+                                    Spectra</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/dog/flea-and-worming?brand=credelio-plus" target="_blank"><img height="500" src="https://storage.googleapis.com/petcircle-assets/images/products/z/credelio-plus-small-dog-pink.png" width="502"/></a><a class="ui-edit" href="/dog/flea-and-worming?brand=credelio-plus" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Credelio
+                                    Plus</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/search?searchTerm=nexgard%20spectra%20cat" target="_blank"><img src="https://www.petcircle.com.au/petcircle-assets/images/products/p/nexgard-spectra-spot-on-for-large-cats-yellow.png"/></a><a class="ui-edit" href="/search?searchTerm=nexgard%20spectra%20cat" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Nexgard Spectra</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/cat/flea-and-worming/all-in-one?brand=revolution-plus" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/revolution-plus-orange-medium-cat.png" width="1000"/></a><a class="ui-edit" href="/cat/flea-and-worming/all-in-one?brand=revolution-plus" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Revolution
+                                    Plus</a></p>
+</div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px">
+<a class="ui-edit" href="/dog/flea-and-worming" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;" target="_blank">Shop
+                                    All Dog Preventatives</a></p>
+</div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px">
+<a class="ui-edit" href="/cat/flea-and-worming" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;" target="_blank">Shop
+                                    All Cat Preventatives</a></p></div>
+<h2 class="custom-discover-heading" id="groom">Tip 3: Groom at Home</h2>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="500" src="https://www.youtube.com/embed/ZsHPBJb3qhE" title="Pet Circle Grooming Q &amp; A with Melanie Newman" width="1240"></iframe>
+<p>Depending on the breed of your dog or cat, regular grooming and bathing may be required to
+                            keep
+                            their coat and skin in optimal condition. Bathing, brushing and clipping your pet at home
+                            can
+                            save you money. </p>
+<p>Try brushing your dog or cat daily to prevent mats from occurring. Investing in a good
+                            quality
+                            <a href="/search?pet=cat&amp;category=grooming&amp;pet=dog&amp;variety=brushes-and-combs">brush</a> that
+                            suits your pet's coat can help make the job easier. </p>
+<p>Nail clipping is another grooming requirement that you can try at home to save money.
+                            Purchase a
+                            good quality
+                            pair of <a href="/search?pet=cat&amp;variety=nail-clippers&amp;pet=dog">nail clippers</a> and follow
+                            this <a href="/discover/trimming-your-pets-nails">guide</a> on how to clip your pets nails.
+                            If cutting your pet's nails seem daunting, ask your vet or vet nurse to teach you. If your
+                            pet
+                            is
+                            a little unsure, <a href="https://www.petcircle.com.au/dog/cat/treats">treats</a> can go a
+                            long
+                            way. Try using a <a href="/lickimat?pet=cat&amp;pet=dog">lickimat</a> with some
+                            <a href="/dog/treats?variety=liquid-and-paste-treats&amp;flavour=peanut-butter-flavour">peanut
+                                butter</a> or <a href="/cat/treats?variety=liquid-and-paste-treats">liquid treat</a>
+                            smeared
+                            on as a distraction. </p>
+<p>Bathing your pet at home, instead of relying on dog washing services or groomers can help
+                            save
+                            you
+                            money. Try using a mild <a href="/dog/cat/grooming?variety=shampoo-and-conditioner&amp;health-condition=sensitive-skin">shampoo
+                                and conditioner</a> that is gentle on sensitive skin and can be
+                            suitable for different pets and skin types to save you having to purchase multiple products.
+                        </p>
+<p>For dog or cat breeds that require regular clipping, try purchasing some <a href="/dog/cat/grooming?variety=shampoo-and-conditioner&amp;health-condition=sensitive-skin">clippers</a>
+                            and give this a
+                            go at home! Melanie Newman, internationally recognised Master Dog Groomer, salon owner and
+                            developer of her own range of premium grooming products <a href="/search?searchTerm=melanie newman">Melanie Newman Salon Essentials</a>, has a
+                            series of <a href="https://www.youtube.com/c/MelanieNewmanSalonEssentials">tutorial
+                                video's</a>
+                            to help you learn to groom at home, including <a href="https://www.youtube.com/watch?v=oyCDS6az1r8">How to Clip a Cavoodle</a>, <a href="https://www.youtube.com/watch?v=i8Yvk5El1rk">How to Groom Your Dog in a Teddy Bear
+                                Trim</a> and <a href="https://www.youtube.com/watch?v=F_Z4h9MgUJk">How to Remove Knots
+                                and
+                                Matts</a>.</p>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/aloveen" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/aloveen-starter-pack.png" width="1000"/></a><a class="ui-edit" href="/aloveen" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Aloveen
+                                    Shampoo &amp; Conditioner </a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/search?pet=cat&amp;category=grooming&amp;pet=dog&amp;variety=brushes-and-combs&amp;brand=pakeway" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/pakeway-t9-slicker-brush-aqua___2.png" width="1000"/></a><a class="ui-edit" href="/search?pet=cat&amp;category=grooming&amp;pet=dog&amp;variety=brushes-and-combs&amp;brand=pakeway" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Pakeway
+                                    Slicker Brush</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/melanie-newman-salon-essentials?type=colognes" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/melanie-newman-salon-essentials-relax-dog-grooming-cologne.png" width="1000"/></a><a class="ui-edit" href="/melanie-newman-salon-essentials?type=colognes" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Melanie
+                                    Newman Cologne</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/wahl" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/wahl-pet-grooming-home-combo.png" width="1000"/></a><a class="ui-edit" href="/wahl" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Wahl
+                                    Pet Clippers</a></p>
+</div>
+<p class="edit-details" style="margin-bottom: 30px">
+<a class="ui-edit" href="https://www.petcircle.com.au/dog/cat/grooming" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;" target="_blank">Shop
+                                All Dog and Cat Grooming Products</a></p>
+<h2 class="custom-discover-heading" id="insurance">Tip 4: Consider Pet Insurance
+                        </h2>
+<img height="350" src="https://storage.googleapis.com/petcircle-assets/images/blog/pet-first-aid-tips-1.jpg" width="850">
+<p>Pet insurance can be a great way to protect your pet and yourself against any
+                            unexpected medical expenses.
+                            Like all insurance policies it is important to do your research, consider your
+                            budget and what
+                            you want your pet covered for. When your pet is a puppy or kitten is a great time to
+                            get them
+                            insured. They are less likely to have pre-existing medical conditions that can be excluded in their
+                            insurance
+                            policies, plus young pets are prone to getting into mischief. Most insurance
+                            premiums increase as your pet ages so it is important to budget for
+                            this. </p>
+<p>If pet insurance isn't for you, consider setting up a bank account where you put
+                            aside money on a
+                            regular basis to cover for your pet's medical expenses. This ensures that if your
+                            pet becomes
+                            unwell or requires surgery for some reason you have the funds already available to
+                            help cover
+                            the costs. </p>
+</img></div>
+<div class="col-sm-12">
+<a href="https://www.petcircleinsurance.com.au/" target="_blank">
+<img src="https://petcircle.com.au/petcircle-assets/images/blog/petcircle-insurance-banner-2024.jpg" style="object-fit: scale-down;">
+</img></a>
+</div>
+<p><em><small>* This offer cannot be used in conjunction with any other offer, is available for new policies purchased before 01/12/2023 using the promotion code PCI2FREE. </small></em></p>
+<p><em><small>Pet Circle Insurance is underwritten by Pacific International Insurance Pty Ltd (ABN 83 169 311 193) and distributed by
+                    Knose Financial Services Pty Ltd (ABN 38 620 795 735, AFSL 536651) ('Knose'). Millell Pty Ltd trading as Pet Circle (ABN
+                    17 148 151 213, AR 001300998)('Pet Circle') act as an authorised representative of Knose.
+                    Any advice provided is general only and has been prepared without taking into account your objectives, financial
+                    situation or needs. You should consider the appropriateness of any such advice, the <a href="https://files.petcircleinsurance.com.au/petcircle/petcircle-pds.pdf">Product Disclosure Statement
+                    ('PDS')</a>, <a href="https://files.petcircleinsurance.com.au/petcircle/petcircle-fsg.pdf">Financial Services Guide (FSG)</a>, and the <a href="https://files.petcircleinsurance.com.au/petcircle/petcircle-tmd.pdf">Target Market Determination ('TMD')</a> available at
+                    <a href="https://www.petcircleinsurance.com.au/">www.petcircleinsurance.com.au</a> before making a decision to acquire, or to continue to hold, the product.</small></em></p>
+<div class="col-sm-12">
+<h2 class="custom-discover-heading" id="vet">Tip 5: Keep Up Regular Veterinary Visits</h2>
+<img height="351" src="https://storage.googleapis.com/petcircle-assets/images/blog/kitten-to-cat-graduation-guide-7.jpg" width="850">
+<p>Spending money on regular veterinary visits may seem counter-intuitive when it comes to
+                            saving
+                            money, but having regular vaccinations and check ups on your pet, is a great way to protect
+                            them
+                            against preventable illnesses. Your veterinarian may also identify other medical issues
+                            early
+                            on, which may save you money
+                            in the long run and ensure that your pet is in optimal health. </p>
+<p>For younger dogs and cats, annual check ups and vaccinations are recommended, while for older
+                            pets or those with pre-existing conditions, six monthly visits are optimal. </p>
+<p class="read-more-link"><b>For more information when your pet should see the veterinarian.</b>
+                            Read our
+                            veterinary written article <a href="/discover/pet-visit-vet">How Often Should Your Pet Visit
+                                the
+                                Vet?</a> </p>
+<h2 class="custom-discover-heading" id="premium">Tip 6: Choose a Premium Pet Food</h2>
+<img height="350" src="https://storage.googleapis.com/petcircle-assets/images/blog/Dental-Care-Puppy-food.jpg" width="850">
+<p>Good nutrition is important to health - both for us and our pets. Supermarket pet
+                            foods are often
+                            complete and balanced but lack the additional benefits and nutritional analysis seen
+                            in <a href="/dog/cat/food?variety=premium">Premium brand foods</a>. These diets are
+                            highly digestible and often more nutrient dense, which
+                            means you may actually need to feed <b>less</b>, potentially saving you money in the
+                            long run and also
+                            keeping your pet healthier. </p>
+<p>When considering cost per day, a premium brand diet such as <a href="/advance?pet=cat">Advance
+                                Adult Cat
+                                Food</a> costs $0.68 per serve while a leading supermarket brand dry food costs
+                            $0.77 per
+                            serve. The <a href="/dog/cat/food?variety=premium">Premium diet</a> is not only cheaper, but
+                            has
+                            the addition of Omega
+                            3 fatty acids,
+                            antioxidants and tartar control, providing your pet with additional health benefits.
+                            The increased digestibility
+                            of <a href="/dog/cat/food?variety=premium">Premium brands</a> when compared to a supermarket
+                            brand, results in a smaller serving size
+                            meaning a bag of food will last longer and save you money!</p>
+<p class="read-more-link"><b>Looking for more information on the advantages of feeding
+                                Premium
+                                Diets? </b> Read our
+                            veterinary written article <a href="/discover/real-cost-supermarket-food">The Real
+                                Cost of
+                                Supermarket Food</a>.</p>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/dog/food/dry-food?variety=premium&amp;brand=pro-plan" target="_blank"><img src="https://www.petcircle.com.au/petcircle-assets/images/products/z/pro-plan-adult-medium-breed-essential-health-dry-dog-food.png"/></a><a class="ui-edit" href="/dog/food/dry-food?variety=premium&amp;brand=pro-plan" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Purina Pro Plan Dry Dog Food</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/dog/food/wet-food?brand=royal-canin" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/royal-canin-mini-adult-wet-dog-food-pouches.png" width="1000"/></a><a class="ui-edit" href="/dog/food/wet-food?brand=royal-canin" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Royal
+                                    Canin Mini Pouches</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/search?searchTerm=advance+cat&amp;pet=cat&amp;brand=advance&amp;type=dry-food" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/advance-adult-dry-cat-food-chicken-with-rice.png" width="1000"/></a><a class="ui-edit" href="/search?searchTerm=advance+cat&amp;pet=cat&amp;brand=advance&amp;type=dry-food" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Advance
+                                    Dry Cat Food</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/cat/food/wet-food?brand=hills-science-diet" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/hills-science-diet-adult-healthy-cuisine-chicken-and-rice-medley-canned-cat-food.png" width="1000"/></a><a class="ui-edit" href="/cat/food/wet-food?brand=hills-science-diet" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Hills
+                                    Science Diet Chicken Medley</a></p>
+</div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px"><a class="ui-edit" href="/dog/food?variety=premium" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Shop
+                                    All Premium Brand Dog Food</a></p>
+</div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px"><a class="ui-edit" href="/cat/food?variety=premium" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Shop
+                                    All Premium Brand Cat Food</a></p>
+</div>
+<h2 class="custom-discover-heading" id="autodelivery">Tip 7: Opt for Auto Delivery or
+                            Subscriptions</h2>
+<img height="350" src="https://storage.googleapis.com/petcircle-assets/images/blog/covid-and-anxiety-hero.jpg" width="850">
+<p>Many companies offer loyalty discounts on food and other pet products. Signing up for
+                            an <a href="/auto-delivery">auto delivery</a> on your pet's essentials ensures
+                            they arrive at your door, at a set time period
+                            of your choosing, without you even having to think about it. </p>
+<p> Many auto delivery or
+                            subscription services offer discounts of up to 20% dependent on the product you are
+                            buying, which saves you money in the long term and can be cancelled at anytime.
+                        </p>
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/auto-delivery" target="_blank"><img height="365" src="https://storage.googleapis.com/petcircle-assets/images/blog/auto-delivery.jpg" width="750"/></a>
+</p>
+</div>
+<h2 class="custom-discover-heading" id="toys">Tip 8: Interactive Toys and Treats</h2>
+<img height="355" src="https://storage.googleapis.com/petcircle-assets/images/blog/winter-recipes-west-paw.jpg" width="820">
+<p style="font-size:small">Image from <a href="https://www.instagram.com/westpawus/?hl=en">West
+                                Paw Instagram </a></p>
+<p>Our pets love treats and we love rewarding them, but spoiling your pet doesn't have to be
+                            expensive.</p>
+<p>Interactive toys such as <a href="/kong">KONG</a>, <a href="/lickimat">Lickimat</a> and <a href="/west-paw">West Paw</a> are durable and fantastic quality. All brands can be
+                            coupled with your pet's favourite treat, regular dry kibble or home made recipes, and frozen
+                            for an extra challenge. They are reusable and dishwasher safe, making clean up a breeze!
+                            Check out our healthy home made <a href="https://www.petcircle.com.au/discover/homemade-winter-recipes#kong">KONG</a>, <a href="/discover/homemade-winter-recipes#lickimat">Lickimat</a> and <a href="/discover/winter-homemade-recipes-dog-cat-pocketpets#westpaw">West Paw </a>
+                            stuffer recipes.</p>
+<p>Try making some free interactive toys at home. For dogs, take a clean and dry 2L milk bottle,
+                            remove the lid, carefully poke some holes in it and fill it with your pet's favourite treat
+                            or kibble. Your dog will love rolling this home made toy around waiting for the food to pop
+                            out! For cats, leave any delivery boxes lying around for a few days for your cat to play in
+                            and investigate....cats love boxes!! </p>
+<div class="col-sm-6">
+<div class="recipe">
+<div class="recipe-card">
+<h3>For Dogs</h3>
+<p>Interactive Toy Recipe Ideas:</p>
+<ul style="list-style: inside disc;">
+<li><a href="/product/kong-stuffn-adult-ziggies/dak8160">KONG Ziggies</a> and <a href="/dog/treats/training-and-reward-treats/kong">KONG Biscuit Treats</a></li>
+<li><a href="/search?searchTerm=kong+paste&amp;variety=long-lasting-treats">KONG Pastes</a>
+</li>
+<li><a href="/product/mimi-and-munch-bambis-butter/bpb01">Mimi and Munch Bambis
+                                        Butter</a></li>
+<li>Pumpkin, Sweet Potato or Apple Puree</li>
+<li><a href="/search?type=dry-food&amp;pet=dog">Dry Kibble</a> or <a href="/dog/food/wet-food">Wet Food</a></li>
+<li>Warm porridge- pre-cooked with no sugar</li>
+<li>Cottage Cheese or Natural Yoghurt</li>
+<li>Fill with <a href="/search?category=treats&amp;variety=meal-toppers">Bone Broth</a> or
+                                    low-salt stock and freeze</li>
+</ul>
+<p></p>
+</div></div></div>
+<div class="col-sm-6">
+<div class="recipe">
+<div class="recipe-card">
+<h3>For Cats</h3>
+<p>Interactive Toy Recipe Ideas:</p>
+<ul style="list-style: inside disc">
+<li>Pastes such as <a href="/search/dine+creamy+treats">Dine Creamy Treats</a> or <a href="/cat/treats?variety=liquid-and-paste-treats&amp;brand=inaba">Inaba Churu Puree and Paste Treats</a></li>
+<li>Wet Food such as <a href="/cat/food/wet-food/royal-canin">Royal Canin Wet Food</a>,
+                                    <a href="/cat/food/wet-food?brand=wellness&amp;variety=premium">Wellness Core Simply
+                                        Shreds</a> or <a href="/cat/food/wet-food/ziwi">Ziwi Wet Food</a> </li>
+<li>Canned fish (salmon, tuna or sardines)</li>
+<li>Pumpkin, Sweet Potato or Apple Puree</li>
+<li>Natural Yoghurt</li>
+<li><a href="/cat/treats">Treats</a> such as <a href="/cat/treats/greenies">Greenies</a>, <a href="/cat/treats/loving-pets/">Loving Pets</a> or <a href="/cat/treats/blackcat">Blackcat</a></li>
+<li>Fill with <a href="/search?category=treats&amp;variety=meal-toppers">Bone Broth</a> or
+                                    low-salt stock and freeze</li>
+</ul>
+<p></p>
+</div></div></div>
+</img></img></img></img></div>
+<div class="col-sm-12">
+<p class="read-more-link"><b>For more home made recipes for your pet</b> read our
+                            veterinary written articles <a href="/discover/winter-homemade-recipes-dog-cat-pocketpets">Winter Recipes for Dogs,
+                                Cats and Pocket Pets</a>, <a href="/discover/homemade-winter-recipes">Home Made
+                                Winter Recipes</a> and <a href="/discover/homemade-summer-recipes">Summer
+                                Recipes</a>.</p>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/west-paw" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/west-paw-rumbl-large-dog-toy-melon___6.png" width="1000"/></a><a class="ui-edit" href="/west-paw" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">West
+                                    Paw Rumbl</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/dog/treats?variety=liquid-and-paste-treats&amp;brand=mimi-and-munch&amp;brand=doggylicious" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/mimi-and-munch-mutella-pooch-carob-spread.png" width="1000"/></a><a class="ui-edit" href="/dog/treats?variety=liquid-and-paste-treats&amp;brand=mimi-and-munch&amp;brand=doggylicious" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Mimi
+                                    and Munch Mutella Spread</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/lickimat" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/lickimat-slomo-turquoise.png" width="1000"/></a><a class="ui-edit" href="/lickimat" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Lickimat
+                                    Slomo</a></p>
+</div>
+<div class="col-sm-3">
+<p class="edit-details" style="margin-bottom: 30px">
+<a href="/cat/treats?variety=liquid-and-paste-treats" target="_blank"><img height="1000" src="https://storage.googleapis.com/petcircle-assets/images/products/z/inaba-churu-skin-and-coat-tuna-recipe.png" width="1000"/></a><a class="ui-edit" href="/cat/treats?variety=liquid-and-paste-treats" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Inaba
+                                    Churu Liquid Treat</a></p>
+</div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px">
+<a class="ui-edit" href="/dog/toys?variety=interactive-toys" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;" target="_blank">Shop
+                                    All Dog Interactive Toys</a></p>
+</div>
+<div class="col-sm-6">
+<p class="edit-details" style="margin-bottom: 30px">
+<a class="ui-edit" href="/cat/toys?variety=interactive-toys" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;" target="_blank">Shop
+                                    All Cat Interactive Toys</a></p>
+</div>
+<h2 class="custom-discover-heading" id="online">Tip 9. Buy Products Online</h2>
+<img height="400" src="https://storage.googleapis.com/petcircle-assets/images/blog/budget-better-3.jpg" width="850">
+<p style="font-size:small">Image from <a href="https://www.instagram.com/maias_adventures/">@maias_adventures</a></p>
+<p>Purchasing pet supplies online not only gives you access to a wide variety of products
+                            and different brands, but it enables you to 'shop
+                            around' and compare prices, all from the comfort of your home. Online stores can often
+                            offer lower
+                            prices than physical pet stores and even deliver to your door, saving you time, the
+                            effort of
+                            lugging big bags of food out of the car and petrol....which is so
+                            expensive at the moment!!</p>
+<p>Some large pet store chains even list different prices online compared to in store.
+                            Customer are stung with prices up to 30% higher in store because of the 'convenience'
+                            offered of
+                            being able to purchase immediately. </p>
+<p>Sometimes it is difficult to know which product is best for our pet, and in these cases
+                            going
+                            into a pet store can
+                            help answer questions or concerns that you may have. Not all pet retailers are created
+                            equal
+                            though, with many pet stores selecting staff based on retail experience, not
+                            qualifications in
+                            animal care. </p>
+<p>At Pet Circle we have over <a href="/discover/vet-squad">20 qualified
+                                veterinarians</a> available to answer
+                            any question
+                            you may have about your pet, all free of charge. You don't even have to be a customer!
+                            Ensure
+                            the pet advise
+                            you are getting is from qualified individuals with your pet's best interest at heart.</p>
+<h2 class="custom-discover-heading" id="reading">Further Reading</h2>
+<p><u><a href="/discover/your-guide-to-pet-supplements">Your Guide to Pet
+                                    Supplements</a></u></p>
+<p><u><a href="/discover/real-cost-supermarket-food">Real Cost of Supermarket
+                                    Food</a></u></p>
+<p><u><a href="/discover/calm-anxious-pet">How to Calm an Anxious Pet</a></u></p>
+<p><u><a href="/discover/pet-first-aid-tips">First Aid Tips</a></u></p>
+<p><u><a href="/discover/weird-wonderful-pets">Weird and Wonderful Pets</a></u>
+</p>
+<p class="edit-details" style="margin-bottom: 30px">
+<a class="ui-edit" href="/dog/cat" id="contact-edit" style="text-align:center;display:block;color: rgb(16, 179, 177); text-decoration: none !important;">Shop
+                                All Dog and Cat Supplies</a></p>
+<p class="read-more-link"><b>Want to know more?</b> Check out our <u><a href="/discover">Discover
+                                    Page</a></u> for more tips on keeping your pets happy and healthy.</p>
+</img></div>
+</div>
+</div>
+</div>
+</div>
+</div></html>
